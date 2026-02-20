@@ -74,7 +74,7 @@ void SumPoli(poli out,const uint16_t a[256],const uint16_t b[256]){
     }
 }
 // =================================================================================
-// Function Traspuesta
+// Transpose matrix
 // =================================================================================
 void Traspuesta(poli A[K][K],poli B[K][K]) {
     for (int i=0;i<K;i++) {
@@ -86,7 +86,7 @@ void Traspuesta(poli A[K][K],poli B[K][K]) {
     }
 }
 // =================================================================================
-// Function Compress
+// Compress Function
 // =================================================================================
 void Compress(uint16_t out[],const uint16_t in[],int d) {
     uint16_t mask=(1<<d)-1;
@@ -97,7 +97,7 @@ void Compress(uint16_t out[],const uint16_t in[],int d) {
 }
 
 // =================================================================================
-// Function Decompress
+// Decompress Function
 // =================================================================================
 void Decompress(uint16_t *a,const uint16_t *b,int d){
     for (int i=0;i<N;i++) {
@@ -106,7 +106,7 @@ void Decompress(uint16_t *a,const uint16_t *b,int d){
     
 }
 // =================================================================================
-// Function PRF
+// PRF Function
 // =================================================================================
 void PRF(uint8_t out[64*n2], const uint8_t sigma[32],uint8_t NN,int n) {
     uint8_t input[33];
@@ -199,7 +199,7 @@ void SampleNTT(uint16_t out[256], const uint8_t input[34]) {
     free(buffer);
 }
 // =================================================================================
-// Function generate_matrix
+// Generate_matrix Function
 // =================================================================================
 void generate_matrix(poli A[K][K], const uint8_t rho[32]) {
     uint8_t input[34];
@@ -720,7 +720,7 @@ void ML_KEMDECAPS(uint8_t Keydecaps[32],const uint8_t dk[768*K+96],const uint8_t
     printf("\n------------------------------------------------------------------------------\n");
 }
 // =================================================================================
-// Function principal
+// Main Function
 // =================================================================================
 int main() {
     uint8_t ek[384*K+32];
