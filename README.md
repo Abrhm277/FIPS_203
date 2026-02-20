@@ -82,7 +82,8 @@ Compile your project normally.
 
 The program will process all test blocks sequentially and verify both encapsulation and decapsulation results.
 
-Below is an example main implementation used to run the ML-KEM KAT tests:
+Below is an example main implementation used to run the ML-KEM KAT tests.  
+You only need to insert this code into `main.c`, making slight modifications:
 
 ```
 void hex_to_bytes(const char *hex, uint8_t *out, size_t len)
